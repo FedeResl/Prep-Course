@@ -5,7 +5,7 @@ const gitRemoteOriginUrl = require("git-remote-origin-url");
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
-  return array[0]
+  return array[0];
 
 
 }
@@ -14,16 +14,15 @@ function devolverPrimerElemento(array) {
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
-  return array[array.length -1]
   
+  return array.pop(array.length);
 }
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
-  return array.length
-  
+  return array.length;  
 
 }
 
@@ -33,12 +32,10 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  var nuevoArray = [];
-  for(var i = 0; i < array.length; i++) {
-    nuevoArray[i] = array[i] + 1;
-  }
-  return nuevoArray;
-  
+  var nuevoarray=[]
+  for (var i = 0; i < array.length; i++) {
+     nuevoarray[i] = array[i] + 1
+     }return nuevoarray  
   
 }
 
@@ -47,17 +44,18 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  array[array.length] = elemento 
-  return array  
-}
+  array[array.length] = elemento
+  return array
 
+  
+}
 
 function agregarItemAlComienzoDelArray(array, elemento) {
   // Añade el "elemento" al comienzo del array
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-  array.unshift (elemento)
+  array.unshift(elemento)
   return array
   
 }
@@ -69,7 +67,9 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-return palabras.join (' ')
+  return palabras.join(" ")   
+  
+
 }
 
 
@@ -77,9 +77,14 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-  for(var i = 0; i < array.length; i++)
-  {if (array [i] === elemento){return true}
-} return false
+  for (var i = 0; i < array.length; i++)
+    if( array[i] === elemento){return true}
+    return false
+    
+    
+  
+
+  
 }
 
 
@@ -87,11 +92,13 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
-  var suma = 0;
-  for(var i = 0; i < numeros.length; i++) {
-    suma = suma + numeros[i];
-  }
-  return suma;
+  var nuevonum = 0
+  for (var i = 0; i < numeros.length; i++) {
+    nuevonum = nuevonum + numeros[i]};
+    return nuevonum
+    
+  
+  
 }
 
 
@@ -99,7 +106,8 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
-  return agregarNumeros(resultadosTest) / resultadosTest.length
+  return agregarNumeros(resultadosTest) / resultadosTest.length;
+  
 }
 
 
@@ -114,6 +122,7 @@ function numeroMasGrande(numeros) {
     }
   }
   return maximo;
+  
 
 }
 
@@ -128,21 +137,21 @@ function multiplicarArgumentos() {
     total = total * arguments[i];
   }
   return total;
+  
 }
 
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-  var contador = 0;
-  for (var i = 0; i < arreglo.length ; i++) {
-    if(arreglo[i] > 19){
-      contador++
-    }
-  }
-  return contador
+  let mayor = 0
+  for (let i = 0; i < arreglo.length; i++){ 
+     if(arreglo[i]> 19){
+     mayor++}}
 
-}
+     return mayor
+     }
+  
 
 
 function diaDeLaSemana(numeroDeDia) {
@@ -151,8 +160,8 @@ function diaDeLaSemana(numeroDeDia) {
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí 
   if( numeroDeDia === 1 || numeroDeDia === 7){return "Es fin de semana"}
-  else {return "Es dia Laboral"}  
-  
+  else {return "Es dia Laboral"}
+   
   
 } 
 
@@ -166,6 +175,7 @@ function empiezaConNueve(n) {
     return true
   }
   return false
+  
 }
 
 
@@ -198,8 +208,8 @@ function mesesDelAño(array) {
     return "No se encontraron los meses pedidos";
   }
   else {
-      return nuevoArray;
-  }
+      return nuevoArray;}
+  
 }
 
 
@@ -214,6 +224,7 @@ function mayorACien(array) {
     }
   }
   return nuevoArray;
+  
 }
 
 
@@ -240,6 +251,8 @@ function breakStatement(numero) {
   else {
       return array;
   }
+  
+  
 }
 
 
